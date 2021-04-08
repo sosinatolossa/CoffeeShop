@@ -8,5 +8,6 @@ namespace CoffeeShop.Models
         [Required]
         public string Title { get; set; }
         public int BeanVarietyId { get; set; }
+        public string BeanVariety { get; set; }
     }
 }

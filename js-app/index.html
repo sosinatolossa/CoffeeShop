@@ -3,12 +3,23 @@
 
 <head>
     <title>Coffee Shop</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
+    <h1>Coffee Shop</h1>
     <button id="run-button">Run It!</button>
     <div id="add-bean"></div>
     <div id="display-beans"></div>
+
+    <div id="newBeanVarietyForm">
+        <h3>New Bean Variety</h3>
+        <input type="text" id="name" placeholder="Bean Variety Name"></input>
+        <input type="text" id="region" placeholder="Bean Variety Region"></input>
+        <textarea type="text" id="notes" placeholder="notes"></textarea>
+        <button id="saveNewBeanVariety">Save New Bean Variety</button>
+    </div>
+
     <script src="main.js"></script>
 </body>
 

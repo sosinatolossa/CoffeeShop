@@ -1,0 +1,23 @@
+
+h1 {
+    color: burlywood;
+    background-color: brown;
+    text-align: center;
+}
+
+#newBeanVarietyForm {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    background-color: burlywood;
+}
+
+#name, #region, #notes {
+    margin-bottom: 10px;
+}
+
+#saveNewBeanVariety {
+    color: burlywood;
+    background-color: brown;
+}

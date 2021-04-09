@@ -33,40 +33,50 @@ function getAllBeanVarieties() {
 }
 
 
-const button1 = document.querySelector("#add-bean");
+const addBeanButton = document.querySelector("#saveNewBeanVariety");
 
-button1.addEventListener("click", () => {
+addBeanButton.addEventListener("click", () => {
     const name = document.querySelector("#name").value
     const region = document.querySelector("#region").value
+    const notes = document.querySelector("#notes").value
     const newBean = {
         name,
         region,
+        notes,
     }
-    addBean2(newBean)
+    debugger
+    addNewBean(newBean)
         .then(beanVarieties => {
             console.log(beanVarieties)
         })
 });
 
-function addBean2(newBean) {
+function addNewBean(newBean) {
     return fetch("https://localhost:5001/api/BeanVariety/", {
         method: "POST",
         headers: {
-            "contenttype": "application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(newBean)
     }).then(getAllBeanVarieties)
 }
 
+/*
+const eventHub = document.querySelector(".newBeanVarietyForm")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "saveNewBeanVariety") {
+        const
+    }
+})
+*/
 
 
 
 
 
 
-
-
-
+/*
 const url2 = "https://localhost:5001/api/coffee/";
 
 const button2 = document.querySelector("#run-button");
@@ -80,3 +90,4 @@ button2.addEventListener("click", () => {
 function getAllCoffee() {
     return fetch(url2).then(resp => resp.json());
 }
+*/
